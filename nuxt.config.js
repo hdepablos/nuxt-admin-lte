@@ -86,11 +86,28 @@ export default {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: [],
+  plugins: [
+    "~/plugins/vuelidate.js",
+    "~/plugins/vue-tables.js",
+    { src: "~/plugins/vue-notification.js", ssr: false },
+    { src: "~/plugins/amCharts.js", ssr: false },
+    { src: "~plugins/vue-select.js", ssr: false }
+  ],
   /*
    ** Nuxt.js dev-modules
    */
-  buildModules: [],
+  buildModules: [
+    // Simple usage
+    "@nuxtjs/moment",
+
+    // With options
+    [
+      "@nuxtjs/moment",
+      {
+        /* module options */
+      }
+    ]
+  ],
   /*
    ** Nuxt.js modules
    */
@@ -100,7 +117,17 @@ export default {
     // Doc: https://axios.nuxtjs.org/usage
     "@nuxtjs/axios",
     // Doc: https://github.com/nuxt-community/dotenv-module
-    "@nuxtjs/dotenv"
+    "@nuxtjs/dotenv",
+
+    // Para select2
+    "nuxt-vue-select",
+    // With options
+    [
+      "nuxt-vue-select",
+      {
+        /* module options */
+      }
+    ]
   ],
   /*
    ** Axios module configuration
@@ -115,5 +142,10 @@ export default {
      ** You can extend webpack config here
      */
     extend(config, ctx) {}
+  },
+
+  // Configuración del moment español
+  moment: {
+    locales: ["es"]
   }
 };

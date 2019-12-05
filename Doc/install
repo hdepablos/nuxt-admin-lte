@@ -8,13 +8,13 @@ npm i @nuxtjs/style-resources
 npm i -S vue2-datepicker
 
 -- Para instalar la libreria de moment
-npm install --save-dev @nuxtjs/moment
+npm install -S-D @nuxtjs/moment
 
 -- Animaciones
 npm install --save vue2-animate
 
 -- jquery
-npm i jquery@1.9.1 --save
+-- npm i jquery@1.9.1 --save
 
 npm i nuxt-fontawesome
 npm i @fortawesome/fontawesome-svg-core @fortawesome/vue-fontawesome
