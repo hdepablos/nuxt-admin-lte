@@ -69,15 +69,14 @@ export default {
         src: "/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js",
         body: true
       },
-      { src: "/dist/js/adminlte.js", body: true }
+      { src: "/dist/js/adminlte.js", body: true },
 
       // Promociones
       // <script src="https://www.allseasons.tur.ar/ws/wc-promociones/dist/allseasons-promociones/allseasons-promociones.js"></script>
-      // {
-      //   src:
-      //     "https://www.allseasons.tur.ar/ws/wc-promociones/dist/allseasons-promociones/allseasons-promociones.js",
-      //   body: true
-      // }
+      {
+        src:
+          "https://www.allseasons.tur.ar/ws/wc-promociones/dist/allseasons-promociones/allseasons-promociones.js"
+      }
     ],
     bodyAttrs: {
       class: "hold-transition sidebar-mini layout-fixed"
@@ -97,15 +96,10 @@ export default {
   plugins: [
     "~/plugins/vuelidate.js",
     "~/plugins/vue-tables.js",
+    // "~/plugins/webcomponents.js",
     { src: "~/plugins/vue-notification.js", ssr: false },
     { src: "~/plugins/amCharts.js", ssr: false },
     { src: "~plugins/vue-select.js", ssr: false }
-
-    // {
-    //   src:
-    //     "https://www.allseasons.tur.ar/ws/wc-promociones/dist/allseasons-promociones/allseasons-promociones.js",
-    //   ssr: false
-    // }
   ],
   /*
    ** Nuxt.js dev-modules
@@ -143,6 +137,7 @@ export default {
       }
     ]
   ],
+
   /*
    ** Axios module configuration
    ** See https://axios.nuxtjs.org/options
