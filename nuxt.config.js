@@ -32,7 +32,8 @@ export default {
         href: "/plugins/icheck-bootstrap/icheck-bootstrap.min.css"
       },
       { rel: "stylesheet", href: "/plugins/jqvmap/jqvmap.min.css" },
-      { rel: "stylesheet", href: "/dist/css/adminlte.min.css" },
+      //   { rel: "stylesheet", href: "/dist/css/adminlte.min.css" },
+      { rel: "stylesheet", href: "/dist/css/adminlte.css" },
       {
         rel: "stylesheet",
         href: "/plugins/overlayScrollbars/css/OverlayScrollbars.min.css"
@@ -46,6 +47,11 @@ export default {
         rel: "stylesheet",
         href:
           "https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700"
+      },
+      {
+        rel: "stylesheet",
+        href:
+          "https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css"
       }
     ],
     script: [
@@ -70,9 +76,6 @@ export default {
         body: true
       },
       { src: "/dist/js/adminlte.js", body: true },
-
-      // Promociones
-      // <script src="https://www.allseasons.tur.ar/ws/wc-promociones/dist/allseasons-promociones/allseasons-promociones.js"></script>
       {
         src:
           "https://www.allseasons.tur.ar/ws/wc-promociones/dist/allseasons-promociones/allseasons-promociones.js"
@@ -81,6 +84,13 @@ export default {
     bodyAttrs: {
       class: "hold-transition sidebar-mini layout-fixed"
     }
+  },
+
+  /*
+   ** Route
+   */
+  router: {
+    middleware: ["redirectToRoute"]
   },
   /*
    ** Customize the progress-bar color
@@ -96,10 +106,12 @@ export default {
   plugins: [
     "~/plugins/vuelidate.js",
     "~/plugins/vue-tables.js",
+    // "~/plugins/alerts.js",
+
     // "~/plugins/webcomponents.js",
-    { src: "~/plugins/vue-notification.js", ssr: false },
     { src: "~/plugins/amCharts.js", ssr: false },
-    { src: "~plugins/vue-select.js", ssr: false }
+    { src: "~plugins/vue-select.js", ssr: false },
+    { src: "~plugins/alerts.js", ssr: false }
   ],
   /*
    ** Nuxt.js dev-modules
@@ -136,6 +148,14 @@ export default {
         /* module options */
       }
     ]
+
+    // [
+    //   "vue-sweetalert2/nuxt",
+    //   {
+    //     confirmButtonColor: "#41b882",
+    //     cancelButtonColor: "#ff7674"
+    //   }
+    // ]
   ],
 
   /*

@@ -8,12 +8,14 @@
 </template>
 
 <script>
-import NavBar from '../components/pages/NavBar'
-import SideBar from '../components/pages/SideBar'
-import Footer from '../components/pages/Footer'
+import NavBar from "../components/pages/NavBar";
+import SideBar from "../components/pages/SideBar";
+import Footer from "../components/alerticons";
 export default {
   components: {
-    NavBar, SideBar, Footer
+    NavBar,
+    SideBar,
+    Footer
   }
-}
+};
 </script>

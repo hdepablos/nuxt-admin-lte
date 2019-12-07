@@ -48,33 +48,33 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="./index.html" class="nav-link active">
-                  <i class="far fa-circle nav-icon" />
-                  <p>Dashboard v1</p>
-                </a>
+                  <nuxt-link to="/" class="nav-link">
+                        <i class="far fa-circle nav-icon" />
+                        <p>Dashboard v1</p>    
+                  </nuxt-link>
               </li>
               <li class="nav-item">
-                <a href="./index2.html" class="nav-link">
-                  <i class="far fa-circle nav-icon" />
-                  <p>Dashboard v2</p>
-                </a>
-              </li>
+                <nuxt-link to="select2" class="nav-link">
+                        <i class="far fa-circle nav-icon" />
+                        <p>Select 2 vue</p>    
+                  </nuxt-link>
+              </li> 
               <li class="nav-item">
-                <a href="./index3.html" class="nav-link">
-                  <i class="far fa-circle nav-icon" />
-                  <p>Dashboard v3</p>
-                </a>
+                <nuxt-link to="fecha" class="nav-link">
+                        <i class="far fa-circle nav-icon" />
+                        <p>Fechas</p>    
+                  </nuxt-link>
               </li>
             </ul>
           </li>
           <li class="nav-item">
-            <a href="pages/widgets.html" class="nav-link">
-              <i class="nav-icon fas fa-th" />
-              <p>
-                Widgets
-                <span class="right badge badge-danger">New</span>
-              </p>
-            </a>
+              <nuxt-link to="promociones" class="nav-link">
+                <i class="nav-icon fas fa-th" />
+                <p>
+                    Widgets
+                    <span class="right badge badge-danger">New</span>
+                </p>
+                </nuxt-link>
           </li>
           <li class="nav-item has-treeview">
             <a href="#" class="nav-link">
@@ -85,12 +85,12 @@
                 <span class="badge badge-info right">6</span>
               </p>
             </a>
-            <ul class="nav nav-treeview">
+            <ul class="nav nav-treeview">  
               <li class="nav-item">
-                <a href="pages/layout/top-nav.html" class="nav-link">
-                  <i class="far fa-circle nav-icon" />
-                  <p>Top Navigation</p>
-                </a>
+                <nuxt-link to="tabla" class="nav-link">
+                        <i class="far fa-circle nav-icon" />
+                        <p>Tablas</p>    
+                  </nuxt-link>
               </li>
               <li class="nav-item">
                 <a href="pages/layout/boxed.html" class="nav-link">
@@ -125,7 +125,7 @@
             </ul>
           </li>
           <li class="nav-item has-treeview">
-            <a href="#" class="nav-link">
+            <a href="javascript:void(0);" class="nav-link">
               <i class="nav-icon fas fa-chart-pie" />
               <p>
                 Charts
@@ -134,22 +134,22 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="pages/charts/chartjs.html" class="nav-link">
-                  <i class="far fa-circle nav-icon" />
-                  <p>ChartJS</p>
-                </a>
+                  <nuxt-link to="grafico" class="nav-link">
+                        <i class="far fa-circle nav-icon" />
+                        <p>Grafico de Barra</p>    
+                  </nuxt-link>
               </li>
               <li class="nav-item">
-                <a href="pages/charts/flot.html" class="nav-link">
-                  <i class="far fa-circle nav-icon" />
-                  <p>Flot</p>
-                </a>
+                  <nuxt-link to="grafico" class="nav-link">
+                        <i class="far fa-circle nav-icon" />
+                        <p>Grafico de Barra</p>    
+                  </nuxt-link>
               </li>
               <li class="nav-item">
-                <a href="pages/charts/inline.html" class="nav-link">
-                  <i class="far fa-circle nav-icon" />
-                  <p>Inline</p>
-                </a>
+                <nuxt-link to="grafico" class="nav-link">
+                        <i class="far fa-circle nav-icon" />
+                        <p>Grafico de Barra</p>    
+                  </nuxt-link>
               </li>
             </ul>
           </li>

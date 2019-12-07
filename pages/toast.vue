@@ -38,12 +38,12 @@
                     <div class="col-md-12">
                       <div class="row">
                         <div class="col-md-12">
-                          <client-only>
+                          <!-- <client-only>
                             <notifications
                               group="foot"
                               class="notifications-vue"
                             ></notifications>
-                          </client-only>
+                          </client-only> -->
                         </div>
                       </div>
 
@@ -139,6 +139,7 @@
 
 <script>
 import { IMaskComponent } from "vue-imask";
+import SweetalertIcon from "../components/pages/NavBar";
 // import jspdf from 'jspdf';
 
 export default {
@@ -152,6 +153,7 @@ export default {
     };
   },
   components: {
+    SweetalertIcon,
     "imask-input": IMaskComponent
   },
   methods: {
@@ -161,32 +163,43 @@ export default {
     getWar() {
       console.log("Esto es una prueba");
 
-      this.$notify({
-        group: "foot",
-        type: "warn",
-        title: "&#9888; Hello notify",
-        text: "Every are time now! :)"
-      });
+      //   Vue.swal("Hello Vue world!!!");
+      //   this.$swal("Hello Vue work");
 
-      this.$notify({
-        group: "foot",
-        type: "error",
-        title: "&#10008; Hello notify",
-        text: "Every are time now! :)"
-      });
+      //   this.$swal.fire({
+      //     icon: "error",
+      //     title: "Oops...",
+      //     text: "Something went wrong!",
+      //     footer: "<a href>Why do I have this issue?</a>"
+      //   });
 
-      this.$notify({
-        group: "foot",
-        type: "success",
-        title: "&#10004; Hello notify",
-        text: "Every are time now! :)"
-      });
+      //   this.$swal.fire({
+      //     title: "Sweet!",
+      //     text: "Modal with a custom image.",
+      //     imageUrl: "https://unsplash.it/400/200",
+      //     imageWidth: 400,
+      //     imageHeight: 200,
+      //     imageAlt: "Custom image"
+      //   });
 
-      this.$notify({
-        group: "foot",
-        title: "Hello notify",
-        text: "Every are time now! :)"
-      });
+      //   const Toast = this.$swal.mixin({
+      //     toast: true,
+      //     position: "top-end",
+      //     showConfirmButton: false,
+      //     timer: 3000,
+      //     timerProgressBar: true,
+      //     onOpen: toast => {
+      //       toast.addEventListener("mouseenter", this.$swal.stopTimer);
+      //       toast.addEventListener("mouseleave", this.$swal.resumeTimer);
+      //     }
+      //   });
+
+      //   Toast.fire({
+      //     icon: "error",
+      //     title: "Signed in successfully"
+      //   });
+
+      this.$swal("Heading", "this is a Heading", "OK");
     }
   },
   mounted() {}

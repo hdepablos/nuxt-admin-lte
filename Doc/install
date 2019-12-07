@@ -64,7 +64,8 @@ npm i -D vue-tables-2
 
 
 -- toasted
-npm i -S vue-notification
+npm install -S vue-sweetalert2
+npm i -S vue-sweetalert-icons
 
 -- inputmask
 npm i vue-imask

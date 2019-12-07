@@ -17,7 +17,7 @@
               <div class="card-body">
                 <div class="tab-content p-0">
                   <!-- Contenido -->
-                  <client-only>
+                  <client-only placeholder="Loading...">
                     <allseasons-promociones></allseasons-promociones>
                   </client-only>
                 </div>
