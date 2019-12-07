@@ -99,12 +99,13 @@ export default {
     "~/plugins/vue-tables.js",
     { src: "~/plugins/vue-notification.js", ssr: false },
     { src: "~/plugins/amCharts.js", ssr: false },
-    { src: "~plugins/vue-select.js", ssr: false },
-    {
-      src:
-        "https://www.allseasons.tur.ar/ws/wc-promociones/dist/allseasons-promociones/allseasons-promociones.js",
-      ssr: false
-    }
+    { src: "~plugins/vue-select.js", ssr: false }
+
+    // {
+    //   src:
+    //     "https://www.allseasons.tur.ar/ws/wc-promociones/dist/allseasons-promociones/allseasons-promociones.js",
+    //   ssr: false
+    // }
   ],
   /*
    ** Nuxt.js dev-modules

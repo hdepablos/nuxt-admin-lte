@@ -35,7 +35,7 @@
                 <div class="tab-content p-0">
                   <!-- Contenido -->
                   <client-only>
-                    <promociones-allseasons></promociones-allseasons>
+                    <!-- <promociones-allseasons></promociones-allseasons> -->
                   </client-only>
                 </div>
               </div>
