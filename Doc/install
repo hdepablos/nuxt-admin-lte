@@ -70,4 +70,5 @@ npm i -S vue-sweetalert-icons
 -- inputmask
 npm i vue-imask
 
-
+-- Auth
+npm install @nuxtjs/auth @nuxtjs/axios 

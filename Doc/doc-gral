@@ -64,3 +64,7 @@ https://lonewolfonline.net/html-character-codes-ascii-entity-unicode-symbols/
 --Api
 https://nuxtjs.org/api/pages-middleware/
 https://nuxtjs.org/guide/routing#middleware
+
+
+-- Autenticación
+https://auth.nuxtjs.org/guide/setup.html

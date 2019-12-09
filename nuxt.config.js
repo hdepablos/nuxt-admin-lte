@@ -100,6 +100,7 @@ export default {
    ** Global CSS
    */
   css: [],
+
   /*
    ** Plugins to load before mounting the App
    */
@@ -113,6 +114,27 @@ export default {
     { src: "~plugins/vue-select.js", ssr: false },
     { src: "~plugins/alerts.js", ssr: false }
   ],
+
+  /*
+   ** Config authenticate
+   */
+  //   auth: {
+  //     strategies: {
+  //       local: {
+  //         endpoints: {
+  //           login: { url: "/auth/login", method: "post", propertyName: "token" },
+  //           //   user: { url: "/auth/user", method: "get", propertyName: "user" },
+  //           logout: { url: "/auth/logout", method: "post" }
+  //         }
+  //         // tokenRequired: true,
+  //         // tokenType: 'bearer'
+  //       }
+  //     },
+  //     redirect: {
+  //       login: "/auth/login",
+  //       home: "/"
+  //     }
+  //   },
   /*
    ** Nuxt.js dev-modules
    */
@@ -136,6 +158,10 @@ export default {
     "bootstrap-vue/nuxt",
     // Doc: https://axios.nuxtjs.org/usage
     "@nuxtjs/axios",
+
+    // Autenticación
+    "@nuxtjs/auth",
+
     // Doc: https://github.com/nuxt-community/dotenv-module
     "@nuxtjs/dotenv",
 
@@ -162,11 +188,15 @@ export default {
    ** Axios module configuration
    ** See https://axios.nuxtjs.org/options
    */
-  axios: {},
+  axios: {
+    baseUrl: "http://localhost:8000"
+  },
   /*
    ** Build configuration
    */
   build: {
+    // Evitar que ponga todos los estilos en linea esto es solo para desarrollo
+    extractCSS: true,
     /*
      ** You can extend webpack config here
      */
@@ -177,4 +207,22 @@ export default {
   moment: {
     locales: ["es"]
   }
+
+  //   auth: {
+  //     strategies: {
+  //       local: {
+  //         endpoints: {
+  //           login: {
+  //             url: "/auth/login",
+  //             method: "post",
+  //             propertyName: "token"
+  //           },
+  //           logout: { url: "/auth/logout", method: "post" }
+  //           //   user: { url: "/auth/user", method: "get", propertyName: "user" }
+  //         }
+  //         // tokenRequired: true,
+  //         // tokenType: 'bearer'
+  //       }
+  //     }
+  //   }
 };

@@ -12,7 +12,8 @@
   },
   "dependencies": {
     "@amcharts/amcharts4": "^4.7.12",
-    "@nuxtjs/axios": "^5.3.6",
+    "@nuxtjs/auth": "^4.8.4",
+    "@nuxtjs/axios": "^5.8.0",
     "@nuxtjs/dotenv": "^1.4.0",
     "@nuxtjs/moment": "^1.4.0",
     "@nuxtjs/style-resources": "^1.0.0",
