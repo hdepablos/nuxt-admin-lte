@@ -124,11 +124,11 @@ export default {
     async register() {
       console.log("datos de form");
       console.log(await this.form);
-      const newUser = await this.$axios.post("/auth/register", this.form);
-      console.log("new usuario");
-      console.log(newUser);
+      // const newUser = await this.$axios.post("/auth/register", this.form);
+      // console.log("new usuario");
+      // console.log(newUser);
 
-      this.$auth.login({ data: this.form });
+      // this.$auth.login({ data: this.form });
       //   this.$router.push({ name: "menu" });
     }
   }

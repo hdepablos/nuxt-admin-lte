@@ -41,14 +41,14 @@
               aria-haspopup="true"
               aria-expanded="false"
               class="nav-link dropdown-toggle"
-              >Dropdown</a
-            >
-            <ul
-              aria-labelledby="dropdownSubMenu1"
-              class="dropdown-menu border-0 shadow"
-            >
-              <li><a href="#" class="dropdown-item">Some action </a></li>
-              <li><a href="#" class="dropdown-item">Some other action</a></li>
+            >Dropdown</a>
+            <ul aria-labelledby="dropdownSubMenu1" class="dropdown-menu border-0 shadow">
+              <li>
+                <a href="#" class="dropdown-item">Some action</a>
+              </li>
+              <li>
+                <a href="#" class="dropdown-item">Some other action</a>
+              </li>
 
               <li class="dropdown-divider"></li>
 
@@ -62,12 +62,8 @@
                   aria-haspopup="true"
                   aria-expanded="false"
                   class="dropdown-item dropdown-toggle"
-                  >Hover for action</a
-                >
-                <ul
-                  aria-labelledby="dropdownSubMenu2"
-                  class="dropdown-menu border-0 shadow"
-                >
+                >Hover for action</a>
+                <ul aria-labelledby="dropdownSubMenu2" class="dropdown-menu border-0 shadow">
                   <li>
                     <a tabindex="-1" href="#" class="dropdown-item">level 2</a>
                   </li>
@@ -82,20 +78,24 @@
                       aria-haspopup="true"
                       aria-expanded="false"
                       class="dropdown-item dropdown-toggle"
-                      >level 2</a
-                    >
-                    <ul
-                      aria-labelledby="dropdownSubMenu3"
-                      class="dropdown-menu border-0 shadow"
-                    >
-                      <li><a href="#" class="dropdown-item">3rd level</a></li>
-                      <li><a href="#" class="dropdown-item">3rd level</a></li>
+                    >level 2</a>
+                    <ul aria-labelledby="dropdownSubMenu3" class="dropdown-menu border-0 shadow">
+                      <li>
+                        <a href="#" class="dropdown-item">3rd level</a>
+                      </li>
+                      <li>
+                        <a href="#" class="dropdown-item">3rd level</a>
+                      </li>
                     </ul>
                   </li>
                   <!-- End Level three -->
 
-                  <li><a href="#" class="dropdown-item">level 2</a></li>
-                  <li><a href="#" class="dropdown-item">level 2</a></li>
+                  <li>
+                    <a href="#" class="dropdown-item">level 2</a>
+                  </li>
+                  <li>
+                    <a href="#" class="dropdown-item">level 2</a>
+                  </li>
                 </ul>
               </li>
               <!-- End Level two -->
@@ -123,7 +123,8 @@
 
       <!-- Right navbar links -->
       <ul class="order-1 order-md-3 navbar-nav navbar-no-expand ml-auto">
-        <template v-if="this.$auth.loggedIn">
+        <!-- <template v-if="this.$auth.loggedIn"> -->
+        <template v-if="2>3">
           <li>
             <nuxt-link to="/auth/logout" class="nav-link">Salir</nuxt-link>
           </li>
@@ -155,9 +156,9 @@
                 <div class="media-body">
                   <h3 class="dropdown-item-title">
                     Brad Diesel
-                    <span class="float-right text-sm text-danger"
-                      ><i class="fas fa-star"></i
-                    ></span>
+                    <span class="float-right text-sm text-danger">
+                      <i class="fas fa-star"></i>
+                    </span>
                   </h3>
                   <p class="text-sm">Call me whenever you can...</p>
                   <p class="text-sm text-muted">
@@ -179,9 +180,9 @@
                 <div class="media-body">
                   <h3 class="dropdown-item-title">
                     John Pierce
-                    <span class="float-right text-sm text-muted"
-                      ><i class="fas fa-star"></i
-                    ></span>
+                    <span class="float-right text-sm text-muted">
+                      <i class="fas fa-star"></i>
+                    </span>
                   </h3>
                   <p class="text-sm">I got your message bro</p>
                   <p class="text-sm text-muted">
@@ -203,9 +204,9 @@
                 <div class="media-body">
                   <h3 class="dropdown-item-title">
                     Nora Silvester
-                    <span class="float-right text-sm text-warning"
-                      ><i class="fas fa-star"></i
-                    ></span>
+                    <span class="float-right text-sm text-warning">
+                      <i class="fas fa-star"></i>
+                    </span>
                   </h3>
                   <p class="text-sm">The subject goes here</p>
                   <p class="text-sm text-muted">
@@ -216,9 +217,7 @@
               <!-- Message End -->
             </a>
             <div class="dropdown-divider"></div>
-            <a href="#" class="dropdown-item dropdown-footer"
-              >See All Messages</a
-            >
+            <a href="#" class="dropdown-item dropdown-footer">See All Messages</a>
           </div>
         </li>
         <!-- Notifications Dropdown Menu -->
@@ -245,19 +244,13 @@
               <span class="float-right text-muted text-sm">2 days</span>
             </a>
             <div class="dropdown-divider"></div>
-            <a href="#" class="dropdown-item dropdown-footer"
-              >See All Notifications</a
-            >
+            <a href="#" class="dropdown-item dropdown-footer">See All Notifications</a>
           </div>
         </li>
         <li class="nav-item">
-          <a
-            class="nav-link"
-            data-widget="control-sidebar"
-            data-slide="true"
-            href="#"
-            ><i class="fas fa-th-large"></i
-          ></a>
+          <a class="nav-link" data-widget="control-sidebar" data-slide="true" href="#">
+            <i class="fas fa-th-large"></i>
+          </a>
         </li>
       </ul>
     </div>

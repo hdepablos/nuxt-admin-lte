@@ -160,7 +160,7 @@ export default {
     "@nuxtjs/axios",
 
     // Autenticación
-    "@nuxtjs/auth",
+    //"@nuxtjs/auth",
 
     // Doc: https://github.com/nuxt-community/dotenv-module
     "@nuxtjs/dotenv",
@@ -189,7 +189,7 @@ export default {
    ** See https://axios.nuxtjs.org/options
    */
   axios: {
-    baseUrl: "http://localhost:8000"
+    // baseUrl: "http://localhost:8000"
   },
   /*
    ** Build configuration
@@ -200,7 +200,7 @@ export default {
     /*
      ** You can extend webpack config here
      */
-    extend(config, ctx) {}
+    extend(config, ctx) { }
   },
 
   // Configuración del moment español

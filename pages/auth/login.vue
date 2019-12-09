@@ -95,9 +95,9 @@ export default {
     async login() {
       console.log("Data login");
       console.log(this.form);
-      this.$auth.loginWith("local", {
-        data: this.form
-      });
+      // this.$auth.loginWith("local", {
+      //   data: this.form
+      // });
     }
   }
 };
