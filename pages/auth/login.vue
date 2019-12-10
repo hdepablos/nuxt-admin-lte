@@ -2,7 +2,9 @@
   <div class="hold-transition login-page">
     <div class="login-box">
       <div class="login-logo">
-        <a href="../../index2.html"><b>Admin</b>LTE</a>
+        <a href="../../index2.html">
+          <b>Admin</b>LTE
+        </a>
       </div>
       <!-- /.login-logo -->
       <div class="card">
@@ -11,12 +13,7 @@
 
           <form @submit.prevent="login">
             <div class="input-group mb-3">
-              <input
-                type="text"
-                class="form-control"
-                placeholder="Usuario"
-                v-model="form.username"
-              />
+              <input type="text" class="form-control" placeholder="Usuario" v-model="form.username" />
               <div class="input-group-append">
                 <div class="input-group-text">
                   <span class="fas fa-envelope"></span>
@@ -40,16 +37,12 @@
               <div class="col-8">
                 <div class="icheck-primary">
                   <input type="checkbox" id="remember" />
-                  <label for="remember">
-                    Remember Me
-                  </label>
+                  <label for="remember">Remember Me</label>
                 </div>
               </div>
               <!-- /.col -->
               <div class="col-4">
-                <button type="submit" class="btn btn-primary btn-block">
-                  Sign In
-                </button>
+                <button type="submit" class="btn btn-primary btn-block">Sign In</button>
               </div>
               <!-- /.col -->
             </div>
@@ -70,9 +63,7 @@
             <a href="forgot-password.html">I forgot my password</a>
           </p>
           <p class="mb-0">
-            <a href="register.html" class="text-center"
-              >Register a new membership</a
-            >
+            <a href="register.html" class="text-center">Register a new membership</a>
           </p>
         </div>
         <!-- /.login-card-body -->
@@ -83,6 +74,9 @@
 <script>
 export default {
   layout: "topNav",
+  // computed: {
+  //   ...mapState("auth", ["loggedIn", "user"])
+  // },
   data() {
     return {
       form: {
@@ -93,11 +87,16 @@ export default {
   },
   methods: {
     async login() {
-      console.log("Data login");
-      console.log(this.form);
-      // this.$auth.loginWith("local", {
-      //   data: this.form
-      // });
+      console.log("Data login con await");
+      try {
+        console.log(this.form);
+        this.$auth.loginWith("local", {
+          data: this.form
+        });
+      } catch (error) {
+        console.log("Error ...");
+        console.log(error);
+      }
     }
   }
 };

@@ -4,17 +4,15 @@
     <!-- Left navbar links -->
     <ul class="navbar-nav">
       <li class="nav-item">
-        <a class="nav-link" data-widget="pushmenu" href="#"
-          ><i class="fas fa-bars"
-        /></a>
+        <a class="nav-link" data-widget="pushmenu" href="#">
+          <i class="fas fa-bars" />
+        </a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
         <a href="index3.html" class="nav-link">Home</a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
-        <nuxt-link to="personal" class="nav-link">
-          Personal AllSeasons
-        </nuxt-link>
+        <nuxt-link to="personal" class="nav-link">Personal AllSeasons</nuxt-link>
       </li>
     </ul>
 
@@ -55,9 +53,9 @@
               <div class="media-body">
                 <h3 class="dropdown-item-title">
                   Brad Diesel
-                  <span class="float-right text-sm text-danger"
-                    ><i class="fas fa-star"
-                  /></span>
+                  <span class="float-right text-sm text-danger">
+                    <i class="fas fa-star" />
+                  </span>
                 </h3>
                 <p class="text-sm">Call me whenever you can...</p>
                 <p class="text-sm text-muted">
@@ -79,9 +77,9 @@
               <div class="media-body">
                 <h3 class="dropdown-item-title">
                   John Pierce
-                  <span class="float-right text-sm text-muted"
-                    ><i class="fas fa-star"
-                  /></span>
+                  <span class="float-right text-sm text-muted">
+                    <i class="fas fa-star" />
+                  </span>
                 </h3>
                 <p class="text-sm">I got your message bro</p>
                 <p class="text-sm text-muted">
@@ -103,9 +101,9 @@
               <div class="media-body">
                 <h3 class="dropdown-item-title">
                   Nora Silvester
-                  <span class="float-right text-sm text-warning"
-                    ><i class="fas fa-star"
-                  /></span>
+                  <span class="float-right text-sm text-warning">
+                    <i class="fas fa-star" />
+                  </span>
                 </h3>
                 <p class="text-sm">The subject goes here</p>
                 <p class="text-sm text-muted">
@@ -143,18 +141,11 @@
             <span class="float-right text-muted text-sm">2 days</span>
           </a>
           <div class="dropdown-divider" />
-          <a href="#" class="dropdown-item dropdown-footer"
-            >See All Notifications</a
-          >
+          <a href="#" class="dropdown-item dropdown-footer">See All Notifications</a>
         </div>
       </li>
       <li class="nav-item">
-        <a
-          class="nav-link"
-          data-widget="control-sidebar"
-          data-slide="true"
-          href="#"
-        >
+        <a class="nav-link" data-widget="control-sidebar" data-slide="true" href="#">
           <i class="fas fa-th-large" />
         </a>
       </li>
@@ -162,3 +153,15 @@
   </nav>
   <!-- /.navbar -->
 </template>
+
+<script>
+export default {
+  layout: "NavBar",
+  // computed: {
+  //   ...mapState("auth", ["loggedIn", "user"])
+  // },
+  data() {
+    return {};
+  }
+};
+</script>

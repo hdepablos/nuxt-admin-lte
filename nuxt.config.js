@@ -1,5 +1,6 @@
 export default {
-  mode: "universal",
+  // mode: "universal",
+  mode: "spa",
   /*
    ** Headers of the page
    */
@@ -118,24 +119,55 @@ export default {
   /*
    ** Config authenticate
    */
-  //   auth: {
-  //     strategies: {
-  //       local: {
-  //         endpoints: {
-  //           login: { url: "/auth/login", method: "post", propertyName: "token" },
-  //           //   user: { url: "/auth/user", method: "get", propertyName: "user" },
-  //           logout: { url: "/auth/logout", method: "post" }
-  //         }
-  //         // tokenRequired: true,
-  //         // tokenType: 'bearer'
-  //       }
-  //     },
-  //     redirect: {
-  //       login: "/auth/login",
-  //       home: "/"
+  auth: {
+    strategies: {
+      local: {
+        endpoints: {
+          login: {
+            url: 'http://localhost:8000/auth/signin',
+            method: 'post',
+            propertyName: false
+          },
+          // logout: {
+          //   url: '/auth/logout',
+          //   method: 'post'
+          // },
+          // user: {
+          //   url: '/auth/profile',
+          //   method: 'get',
+          //   propertyName: false
+          // }
+        },
+        tokenRequired: false,
+        tokenType: false
+      }
+    },
+    redirect: {
+      login: "/menu",
+      home: "/auth/register"
+    }
+  },
+
+  // // Config auth
+  // auth: {
+  //   strategies: {
+  //     local: {
+  //       endpoints: {
+  //         login: { url: "/auth/login", method: "post", propertyName: "token" },
+  //         //   user: { url: "/auth/user", method: "get", propertyName: "user" },
+  //         // logout: { url: "/auth/logout", method: "post" }
+  //       },
+  //       tokenRequired: true,
+  //       // tokenType: 'Bearer'
   //     }
   //   },
+  //   // redirect: {
+  //   //   login: "/auth/login",
+  //   //   home: "/"
+  //   // }
+  // },
   /*
+
    ** Nuxt.js dev-modules
    */
   buildModules: [
@@ -156,11 +188,15 @@ export default {
   modules: [
     // Doc: https://bootstrap-vue.js.org
     "bootstrap-vue/nuxt",
+
+    // Proxy Cors
+    "@nuxtjs/proxy",
+
     // Doc: https://axios.nuxtjs.org/usage
     "@nuxtjs/axios",
 
     // Autenticación
-    //"@nuxtjs/auth",
+    "@nuxtjs/auth",
 
     // Doc: https://github.com/nuxt-community/dotenv-module
     "@nuxtjs/dotenv",
@@ -184,12 +220,22 @@ export default {
     // ]
   ],
 
+  proxy: {
+    "/backend": {
+      target: "http://localhost:8000",
+      pathRewrite: {
+        "^/backend": "/",
+      },
+    },
+  },
+
   /*
    ** Axios module configuration
    ** See https://axios.nuxtjs.org/options
    */
   axios: {
-    // baseUrl: "http://localhost:8000"
+    baseUrl: "http://localhost:8000",
+    credentials: true
   },
   /*
    ** Build configuration
@@ -225,4 +271,4 @@ export default {
   //       }
   //     }
   //   }
-};
+}

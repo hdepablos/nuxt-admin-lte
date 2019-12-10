@@ -71,4 +71,7 @@ npm i -S vue-sweetalert-icons
 npm i vue-imask
 
 -- Auth
-npm install @nuxtjs/auth @nuxtjs/axios 
+npm install @nuxtjs/auth @nuxtjs/axios
+
+-- Proxy
+npm install @nuxtjs/proxy

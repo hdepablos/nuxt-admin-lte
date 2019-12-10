@@ -1,0 +1,13 @@
+let development = process.env.NODE_ENV !== 'production'
+
+module.exports = {
+  axios: {
+    baseURL: development ? 'http://localhost:3001/api' : 'https://domain/api'
+  },
+  modules: [
+    '@nuxtjs/axios'
+  ],
+}
+
+
+https://nuxtjs.org/faq/host-port/
