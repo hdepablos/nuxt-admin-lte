@@ -1,6 +1,6 @@
 export default {
-  // mode: "universal",
-  mode: "spa",
+  mode: "universal",
+  //   mode: "spa",
   /*
    ** Headers of the page
    */
@@ -124,10 +124,10 @@ export default {
       local: {
         endpoints: {
           login: {
-            url: 'http://localhost:8000/auth/signin',
-            method: 'post',
+            url: "http://localhost:8000/auth/signin",
+            method: "post",
             propertyName: false
-          },
+          }
           // logout: {
           //   url: '/auth/logout',
           //   method: 'post'
@@ -189,11 +189,11 @@ export default {
     // Doc: https://bootstrap-vue.js.org
     "bootstrap-vue/nuxt",
 
-    // Proxy Cors
-    "@nuxtjs/proxy",
-
     // Doc: https://axios.nuxtjs.org/usage
     "@nuxtjs/axios",
+
+    // Proxy Cors
+    "@nuxtjs/proxy",
 
     // Autenticación
     "@nuxtjs/auth",
@@ -220,23 +220,29 @@ export default {
     // ]
   ],
 
-  proxy: {
-    "/backend": {
-      target: "http://localhost:8000",
-      pathRewrite: {
-        "^/backend": "/",
-      },
-    },
-  },
+  //   proxy: {
+  //     "/backend": {
+  //       target: "http://localhost:8000",
+  //       pathRewrite: {
+  //         "^/backend": "/"
+  //       }
+  //     }
+  //   },
 
   /*
    ** Axios module configuration
    ** See https://axios.nuxtjs.org/options
    */
   axios: {
-    baseUrl: "http://localhost:8000",
-    credentials: true
+    // baseUrl: "http://localhost:8000",
+    // credentials: true
+    proxy: true
   },
+
+  proxy: {
+    "/api": "http://localhost:8000"
+  },
+
   /*
    ** Build configuration
    */
@@ -246,7 +252,7 @@ export default {
     /*
      ** You can extend webpack config here
      */
-    extend(config, ctx) { }
+    extend(config, ctx) {}
   },
 
   // Configuración del moment español
@@ -271,4 +277,4 @@ export default {
   //       }
   //     }
   //   }
-}
+};
