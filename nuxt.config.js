@@ -132,11 +132,11 @@ export default {
           //   url: '/auth/logout',
           //   method: 'post'
           // },
-          // user: {
-          //   url: '/auth/profile',
-          //   method: 'get',
-          //   propertyName: false
-          // }
+          //   user: {
+          //     url: '/auth/profile',
+          //     method: 'get',
+          //     propertyName: false
+          //   }
         },
         tokenRequired: false,
         tokenType: false
